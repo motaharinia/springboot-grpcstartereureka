@@ -1,0 +1,24 @@
+//messages and enum sample: https://medium.com/@akhaku/protobuf-definition-best-practices-87f281576f31
+//defining service method and message names standards: https://developers.google.com/protocol-buffers/docs/style
+//samples by google: https://github.com/protocolbuffers/protobuf/releases/tag/v3.12.3
+//variable types in proto: https://developers.google.com/protocol-buffers/docs/proto3#scalar
+syntax = "proto3";
+option java_package = "com.motaharinia.server.user.stub";
+
+service User{
+    rpc Login(LoginRequest)  returns (APIResponse);
+    rpc Logout(Empty)  returns (APIResponse);
+}
+
+message LoginRequest{
+    string username = 1 ;
+    string password = 2 ;
+}
+
+message APIResponse{
+    string response_message = 1;
+    int32  response_code  = 2;
+}
+
+message Empty{
+}
