@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.motaharinia</groupId>
-    <artifactId>DiscoveryServer</artifactId>
+    <artifactId>ConfigServer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>DiscoveryServer</name>
-    <description>Motaharinia-Sample DiscoveryServer</description>
+    <name>ConfigServer</name>
+    <description>Motaharinia-Sample ConfigServer</description>
 
 
     <properties>
@@ -25,30 +25,32 @@
 
 
     <dependencies>
-       <!--==========Cloud[Security]==========-->
+        <!--==========Cloud[Security]==========-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
-        <!--==========Cloud[EurekaServer]==========-->
+        <!--==========Cloud[EurekaClient]==========-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-        <!--==========Cloud[AdminServer]==========-->
+        <!--==========Cloud[AdminClient]==========-->
         <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-server</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-server-ui-login</artifactId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!--==========Cloud[ConfigServer]==========-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
 
         <!--==========Test==========-->

@@ -3,7 +3,7 @@
 //samples by google: https://github.com/protocolbuffers/protobuf/releases/tag/v3.12.3
 //variable types in proto: https://developers.google.com/protocol-buffers/docs/proto3#scalar
 syntax = "proto3";
-option java_package = "com.motaharinia.server.user.stub";
+option java_package = "com.motaharinia.grpcserver.business.service.user.stub";
 
 service User{
     rpc Login(LoginRequest)  returns (APIResponse);
