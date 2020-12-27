@@ -2,9 +2,16 @@
 
 ### Service Discovery: Eureka Clients:
 Service Discovery is one of the key tenets of a microservice-based architecture. Trying to hand-configure each client or some form of convention can be difficult to do and can be brittle. Eureka is the Netflix Service Discovery Server and Client. The server can be configured and deployed to be highly available, with each server replicating state about the registered services to the others.
-
-### Registering with Eureka:
 When a client registers with Eureka, it provides meta-data about itself — such as host, port, health indicator URL, home page, and other details. Eureka receives heartbeat messages from each instance belonging to a service. If the heartbeat fails over a configurable timetable, the instance is normally removed from the registry
+
+### Spring Boot Admin:
+Spring Boot Admin is a web application, used for managing and monitoring Spring Boot applications. Each application is considered as a client and registers to the admin server. Behind the scenes, the magic is given by the Spring Boot Actuator endpoints.
+
+### Spring Cloud Config Server:
+Spring Cloud Config Serve provides server and client-side support for externalized configuration in a distributed system. With the Config Server you have a central place to manage external properties for applications across all environments
+
+### Config Server Security:
+The Spring Cloud Config Server (lets say SCCS from here onwards) support basic authentication out of the box
 
 ### Spring Boot and gRPC Starter?
 Auto-configures and runs the embedded gRPC server with @GRpcService-enabled beans as part of spring-boot application.
@@ -79,7 +86,13 @@ further references:
 ### Project Descriptions:
 please see application.properties files in resources folder and select a active profile "dev" or "com" to run project. you can check test methods too.  
 
-tips:
+eureka tips:
+- read msdiscovery README file and run it first.
+- read msconfig README file and run it.
+- run springboot-grpcstarterservereureka.
+- run springboot-grpcstarterclienteureka.
+
+grpc tips:
 - install "Protocol Buffer Editor" (https://plugins.jetbrains.com/plugin/14004-protocol-buffer-editor) for IntelijIDEA to detect .proto files (IntelijIDEA: File -> Settings -> Plugins -> search "Protocol Buffer Editor" and install and restart IDE.)
 - in IntelijIDEA for build stub files from proto file: view menu>tool windows>maven>start
 - BloomRPC: GUI Client for gRPC services. Inspired by Postman and GraphQL Playground BloomRPC aims to provide the simplest and most efficient developer experience for exploring and querying your gRPC services. Download at : https://github.com/uw-labs/bloomrpc/releases

@@ -11,7 +11,8 @@ further references:
 
 ### Project Descriptions:
 We have an application.properties in "/resources" and we can have multiple properties files for any microservice in "/resources/configserverrepo/{MICROSERVICE:spring.application.name}-{MICROSERVICE:spring.profiles.active}.properties"
-For example we can get the "GrpcStarterServer" microservice "dev" config in browser with: "http://localhost:8762/config/GrpcStarterServer/dev" and pass the login form with "motaharinia" and "123456"
+For example we can get the "GrpcStarterServer" microservice "dev" config in browser with: "http://localhost:8762/config/GrpcStarterServer/dev" with "motahariniaconfig" and "123456" login information.
+i set the other microservice application-dev.properties files in the resource folder for test. but we can config it to read them from github repository.
 
 ### IntellliJ IDEA Configurations:
 - IntelijIDEA: Help -> Edit Custom Vm Options -> add these two line:
