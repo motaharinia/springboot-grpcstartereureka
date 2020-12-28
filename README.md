@@ -13,6 +13,10 @@ Spring Cloud Config Serve provides server and client-side support for externaliz
 ### Config Server Security:
 The Spring Cloud Config Server (lets say SCCS from here onwards) support basic authentication out of the box
 
+### Spring Cloud Zuul:
+Zuul is an edge service that allows us to route incoming HTTP requests into multiple backend microservices. For one thing, this is important for providing a unified API for consumers of our backend resources.
+Basically, Zuul allows us to unify all of our services by sitting in front of them and acting as a proxy. It receives all requests and routes them to the correct service. To an external application, our API appears as a unified API surface area.
+
 ### Spring Boot and gRPC Starter?
 Auto-configures and runs the embedded gRPC server with @GRpcService-enabled beans as part of spring-boot application.
 
@@ -87,8 +91,9 @@ further references:
 please see application.properties files in resources folder and select a active profile "dev" or "com" to run project. you can check test methods too.  
 
 eureka tips:
-- read msdiscovery README file and run it first.
-- read msconfig README file and run it.
+- read discoveryserver README file and run it first.
+- read configserver README file and run it.
+- read gatewayserver README file and run it.
 - run springboot-grpcstarterservereureka.
 - run springboot-grpcstarterclienteureka.
 
